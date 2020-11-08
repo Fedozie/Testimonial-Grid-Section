@@ -1,0 +1,128 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 81.25%; }
+  @media only screen and (max-width: 32.5em) {
+    html {
+      font-size: 70%; } }
+  @media only screen and (max-width: 25.3125em) {
+    html {
+      font-size: 60%; } }
+
+body {
+  font-family: "Barlow Semi Condensed";
+  font-weight: 300;
+  background-color: #ecf2f8; }
+
+.container {
+  background-color: #ecf2f8;
+  padding: 10rem;
+  padding-bottom: 3rem;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 3rem;
+  justify-content: center; }
+  @media only screen and (max-width: 68.75em) {
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; } }
+  @media only screen and (max-width: 39.375em) {
+    .container {
+      padding: 5rem; } }
+  @media only screen and (max-width: 32.5em) {
+    .container {
+      padding: 3rem; } }
+  @media only screen and (max-width: 25.3125em) {
+    .container {
+      padding: 2rem; } }
+
+.footer {
+  background-color: #ecf2f8;
+  font-size: 11px;
+  text-align: center;
+  padding-bottom: 3rem; }
+  .footer a {
+    text-decoration: none;
+    color: #3e52a3; }
+
+.tile {
+  border-radius: 10px;
+  padding: 2rem; }
+  .tile__purple {
+    background-color: #7541c8;
+    grid-column: 1 / span 2;
+    position: relative; }
+    .tile__purple::after {
+      content: "\201C";
+      position: absolute;
+      font-size: 30rem;
+      top: -5rem;
+      right: 2rem;
+      z-index: 1;
+      color: rgba(255, 255, 255, 0.5);
+      font-family: sans-serif; }
+      @media only screen and (max-width: 39.375em) {
+        .tile__purple::after {
+          font-size: 20rem;
+          top: -3rem;
+          right: 1rem; } }
+  .tile__gray {
+    background-color: #48556a; }
+  .tile__white-1 {
+    background-color: white; }
+  .tile__black {
+    background-color: #19212e;
+    grid-column: 2 / span 2; }
+  .tile__white-2 {
+    background-color: white;
+    grid-row: 1 / span 2;
+    grid-column: 4 / span 1; }
+  .tile__details {
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    grid-column-gap: 1.5rem;
+    align-items: center; }
+  .tile__img {
+    display: block;
+    width: 3rem;
+    border-radius: 50%; }
+    .tile__img--1 {
+      border: 2px solid #cfcfcf; }
+    .tile__img--2 {
+      border: 2px solid #cfcfcf; }
+    .tile__img--3 {
+      border: 2px solid #19212e; }
+    .tile__img--4 {
+      border: 2px solid #7541c8; }
+    .tile__img--5 {
+      border: 2px solid #19212e; }
+
+.heading-2, .heading-4, .text {
+  font-family: "Barlow Semi Condensed";
+  z-index: 10; }
+
+.heading-2 {
+  margin-bottom: 1rem; }
+  .heading-2-light {
+    color: white; }
+  .heading-2-dark {
+    color: #19212e; }
+
+.heading-4-light {
+  color: white; }
+
+.heading-4-dark {
+  color: #19212e; }
+
+.text-light {
+  color: rgba(255, 255, 255, 0.5); }
+
+.text-dark {
+  color: rgba(25, 33, 46, 0.5); }

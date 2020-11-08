@@ -1,0 +1,41 @@
+%typography{
+    font-family: $font-primary;
+    z-index: 10;
+}
+
+.heading-2{
+    @extend %typography;
+    margin-bottom: 1rem;
+
+    &-light{
+        color: $color-light;
+    }
+
+    &-dark{
+        color: $color-black;
+    }
+}
+
+.heading-4{
+    @extend %typography;
+    
+    &-light{
+        color: $color-light;
+    }
+
+    &-dark{
+        color: $color-black;
+    }
+}
+
+.text{
+    @extend %typography;
+
+    &-light{
+        color: $text-color-light;
+    }
+
+    &-dark{
+        color: $text-color-black;
+    }
+}

@@ -1,0 +1,87 @@
+//COLOUR VARIABLES
+$color-purple: hsl(263, 55%, 52%);
+$color-gray: hsl(217, 19%, 35%);
+$color-black: hsl(219, 29%, 14%);
+$color-light: hsl(0, 0%, 100%); 
+$color-dark: hsl(0, 0%, 81%); 
+
+$text-color-light: hsla(0, 0%, 100%, 0.5);
+$text-color-black: hsla(219, 29%, 14%, 0.5);
+
+$color-background: hsl(210, 46%, 95%);
+
+//FONT VARIABLES
+$font-primary: 'Barlow Semi Condensed';
+
+//RESPONSIVE BREAKPOINTS
+$bp-large: 68.75em;             //1100px / 16 i.e. default font-size of browser => 68.75
+$bp-medium: 39.375em;           //630px / 16 i.e. default font-size of browser => 39.375em
+$bp-small: 32.5em;              //520px / 16 i.e. default font-size of browser => 32.5em
+$bp-smallest: 25.3125em;        //405 px / 16 default font-size of browser => 25.3125em rounded up
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 81.25%;      //13px/browser default i.e. 16px => 1rem = 13px
+
+    @media only screen and (max-width: $bp-small){
+        font-size: 70%;
+    }
+
+    @media only screen and (max-width: $bp-smallest){
+        font-size: 60%;
+    }
+}
+
+body{
+    font-family: $font-primary;
+    font-weight: 300;
+    background-color: $color-background;
+}
+
+.container{
+    background-color: $color-background;
+    padding: 10rem;
+    padding-bottom: 3rem;
+
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 3rem;
+    justify-content: center;
+
+    @media only screen and (max-width: $bp-large) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    @media only screen and (max-width: $bp-medium){
+        padding: 5rem;
+    }
+
+    @media only screen and (max-width: $bp-small){
+        padding: 3rem;
+    }
+
+    @media only screen and (max-width: $bp-smallest){
+        padding: 2rem;
+    }
+}
+
+.footer{
+    background-color: $color-background;
+    font-size: 11px; 
+    text-align: center;
+    padding-bottom: 3rem;
+
+    & a{
+        text-decoration: none;
+        color: hsl(228, 45%, 44%);
+    }
+}
